@@ -1,0 +1,7 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+fribidi-dev
+libgd-dev
+libX11-dev
+xorgproto-dev
+libXt-dev
