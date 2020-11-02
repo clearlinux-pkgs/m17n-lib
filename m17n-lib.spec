@@ -4,10 +4,10 @@
 #
 Name     : m17n-lib
 Version  : 1.8.0
-Release  : 1
+Release  : 2
 URL      : http://download.savannah.gnu.org/releases/m17n/m17n-lib-1.8.0.tar.gz
 Source0  : http://download.savannah.gnu.org/releases/m17n/m17n-lib-1.8.0.tar.gz
-Summary  : Multilingual text processing library (runtimes)
+Summary  : Core API suport of the m17n library.
 Group    : Development/Tools
 License  : LGPL-2.1
 Requires: m17n-lib-bin = %{version}-%{release}
@@ -51,7 +51,6 @@ Requires: m17n-lib-lib = %{version}-%{release}
 Requires: m17n-lib-bin = %{version}-%{release}
 Provides: m17n-lib-devel = %{version}-%{release}
 Requires: m17n-lib = %{version}-%{release}
-Requires: m17n-lib = %{version}-%{release}
 
 %description dev
 dev components for the m17n-lib package.
@@ -76,20 +75,21 @@ license components for the m17n-lib package.
 
 %prep
 %setup -q -n m17n-lib-1.8.0
+cd %{_builddir}/m17n-lib-1.8.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562705521
+export SOURCE_DATE_EPOCH=1604357617
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
 export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FCFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
-export FFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
+export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 %configure --disable-static
 make
@@ -99,13 +99,13 @@ export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-make VERBOSE=1 V=1 check
+make check
 
 %install
-export SOURCE_DATE_EPOCH=1562705521
+export SOURCE_DATE_EPOCH=1604357617
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/m17n-lib
-cp COPYING %{buildroot}/usr/share/package-licenses/m17n-lib/COPYING
+cp %{_builddir}/m17n-lib-1.8.0/COPYING %{buildroot}/usr/share/package-licenses/m17n-lib/caeb68c46fa36651acf592771d09de7937926bb3
 %make_install
 
 %files
@@ -121,7 +121,12 @@ cp COPYING %{buildroot}/usr/share/package-licenses/m17n-lib/COPYING
 
 %files dev
 %defattr(-,root,root,-)
-/usr/include/*.h
+/usr/include/m17n-X.h
+/usr/include/m17n-core.h
+/usr/include/m17n-flt.h
+/usr/include/m17n-gui.h
+/usr/include/m17n-misc.h
+/usr/include/m17n.h
 /usr/lib64/libm17n-core.so
 /usr/lib64/libm17n-flt.so
 /usr/lib64/libm17n-gui.so
@@ -148,4 +153,4 @@ cp COPYING %{buildroot}/usr/share/package-licenses/m17n-lib/COPYING
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/m17n-lib/COPYING
+/usr/share/package-licenses/m17n-lib/caeb68c46fa36651acf592771d09de7937926bb3
