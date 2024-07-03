@@ -1,9 +1,6 @@
-1.8.0
+1.8.4
 bison
-fontconfig-dev
-freetype-dev
+file
 libXft-dev
 libxml2-dev
-pkgconfig(fontconfig)
-pkgconfig(x11)
 pkgconfig(xft)

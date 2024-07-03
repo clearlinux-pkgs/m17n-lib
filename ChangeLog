@@ -1,3 +1,50 @@
+2023-08-23  Mike FABIAN  <mfabian@redhat.com>
+
+	* configure.ac: Version changed to 1.8.4
+	* NEWS: Update for release.
+
+2023-07-25  Mike FABIAN  <mfabian@redhat.com>
+
+	Version 1.8.3 released
+
+	* configure.ac: Version changed to 1.8.3
+
+2023-05-09  Mike FABIAN  <mfabian@redhat.com>
+
+	Version 1.8.2 released.
+
+	* configure.ac: Version changed to 1.8.2
+
+2023-05-09  Sergei Trofimovich <slyich@gmail.com>
+
+	* src/Makefile.am: switch from absolute to relative paths
+
+2023-05-05  Mike FABIAN  <mfabian@redhat.com>
+
+	Version 1.8.1 released.
+
+	* configure.ac: Version changed to 1.8.1
+
+2023-05-04  Mike FABIAN  <mfabian@redhat.com>
+
+	* configure.ac: Update with autoupdate
+	* src/.cvsignore: Delete it
+	* m4/.cvsignore: Delete it
+
+2022-01-27  Helmut Grohne  <helmutg@debian.org>
+
+	* configure.ac: Use "$PKG_CONFIG" instead of directly calling
+	pkg-config.
+
+2020-03-08  handa  <handa@gnu.org>
+
+	* README: Fix typos: libimx -> libmimx
+
+2018-10-22  Boyuan Yang  <byang@debian.org>
+
+	* configure.ac: Do not use the program freetype-config, use
+	PKG_CHECK_MODULES for checking freetype2.
+
 2018-02-08  K. Handa  <handa@gnu.org>
 
 	Version 1.8.0 released.

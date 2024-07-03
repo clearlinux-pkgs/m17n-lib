@@ -1,15 +1,22 @@
-Configure miss: X11/Xaw/Command.h usability
-Configure miss: X11/Xaw/Command.h presence
-Configure miss: X11/Xaw/Command.h
-Configure miss: m17n-db
-Configure miss: fribidi-config
-Configure miss: libotf-config
-Configure miss: OTF_check_features in -lotf
-Configure miss: otf.h usability
-Configure miss: otf.h presence
-Configure miss: otf.h
-Configure miss: xft-config
-Configure miss: xmlParseMemory in -lxml2
 Configure miss: ANTHY
-Configure miss: ispell
+Configure miss: ANTHY
+Configure miss: OTF_check_features in -lotf
+Configure miss: OTF_check_features in -lotf
 Configure miss: WORDCUT
+Configure miss: WORDCUT
+Configure miss: X11/Xaw/Command.h
+Configure miss: X11/Xaw/Command.h
+Configure miss: fribidi-config
+Configure miss: fribidi-config
+Configure miss: ispell
+Configure miss: ispell
+Configure miss: libotf-config
+Configure miss: libotf-config
+Configure miss: m17n-db
+Configure miss: m17n-db
+Configure miss: otf.h
+Configure miss: otf.h
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: x86_64-generic-linux-gnu-file
+Configure miss: xft-config
+Configure miss: xft-config

@@ -6,6 +6,38 @@ Copyright (C) 2015, 2016, 2017  K. Handa  <handa@gnu.org>
 See the end for copying conditions.
 
 
+* Changes in the m17n library 1.8.4
+
+This release is just for bug fixing.
+
+** Fix “typedef in m17n-core.h causing error when compiling with C++ code” (Resolves: https://savannah.nongnu.org/bugs/index.php?64566)
+
+
+* Changes in the m17n library 1.8.3
+
+This release is just for bug fixing.
+
+** Fixes to be able to create m17n-docs-1.8.3: Fix doxygen tags, change all EUC-JP files to UTF-8
+
+
+* Changes in the m17n library 1.8.2
+
+This release is just for bug fixing.
+
+** Switch from absolute to relative paths in src/Makefile.am (Resolves: https://savannah.nongnu.org/bugs/index.php?61377)
+When using absolute paths to .la files automake does not consider them
+local libraries and fails to build in dependency order. Parallel make
+like `make -j16` or `make --shuffle` fails for most runs. Using
+relative paths fixes this problem.
+
+
+* Changes in the m17n library 1.8.1
+
+This release is just for bug fixing.
+
+** Add missing int in example/medit.c (Resolves: https://savannah.nongnu.org/bugs/index.php?64106)
+
+
 * Changes in the m17n library 1.8.0
 
 This release is just for bug fixing.
