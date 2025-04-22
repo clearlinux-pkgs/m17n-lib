@@ -7,7 +7,7 @@
 #
 Name     : m17n-lib
 Version  : 1.8.4
-Release  : 3
+Release  : 4
 URL      : https://download.savannah.gnu.org/releases/m17n/m17n-lib-1.8.4.tar.gz
 Source0  : https://download.savannah.gnu.org/releases/m17n/m17n-lib-1.8.4.tar.gz
 Summary  : GUI API suport of the m17n library.
